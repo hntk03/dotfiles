@@ -1,8 +1,5 @@
 set number
 set title
-syntax enable
-set background=dark
-"colorscheme hybrid
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 highlight LineNr ctermbg=none
@@ -93,3 +90,13 @@ set termguicolors
 " $TERMがxterm以外のときは以下を設定する必要がある。
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum" " 文字色
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum" " 背景色
+
+
+syntax enable
+colorscheme tender
+" set lighline theme inside lightline config
+let g:lightline = { 'colorscheme': 'tender' }
+if (has("termguicolors"))
+ set termguicolors
+endif
+hi Normal ctermbg=NONE guibg=NONE

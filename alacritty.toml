@@ -11,4 +11,7 @@ opacity = 0.8
 
 [font]
 size = 15
+normal = { family = "源ノ角ゴシック Code Jp", style = "N" }
+bold = { family = "源ノ角ゴシック Code Jp", style = "B" }
+italic = { family = "源ノ角ゴシック Code Jp", style = "N it" }
 

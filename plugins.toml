@@ -64,5 +64,8 @@ hook_add = '''
     \}
 '''
 
+[[plugins]]
+repo = 'jacoborus/tender.vim'
+
 
 
