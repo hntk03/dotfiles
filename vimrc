@@ -100,3 +100,7 @@ if (has("termguicolors"))
  set termguicolors
 endif
 hi Normal ctermbg=NONE guibg=NONE
+
+" enable syntax highlighting .astro
+let g:astro_typescript = 'enable'
+let g:astro_stylus = 'enable'

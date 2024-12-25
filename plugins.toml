@@ -67,5 +67,8 @@ hook_add = '''
 [[plugins]]
 repo = 'jacoborus/tender.vim'
 
+[[plugins]]
+repo = 'wuelnerdotexe/vim-astro'
+
 
 
