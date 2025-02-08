@@ -17,10 +17,11 @@ set fileencodings=utf-8,sjis,iso-2022-jp
 set tabstop=2
 set shiftwidth=2
 set autoindent "改行時に前の行のインデントを継続する
+set wildmenu
+set completeopt=menu,menuone,noselect
 
 "for search
 set incsearch "インクリメンタルサーチ．一文字入力ごとに検索を行う．
-
 
 "for clipboard
 set clipboard+=unnamed
