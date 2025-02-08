@@ -2,15 +2,6 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-#nerdtree
-repo = 'scrooloose/nerdtree'
-
-[[plugins]]
-#nerdtree-tab
-repo = 'jistr/vim-nerdtree-tabs'
-hook_add = 'let g:nerdtree_tabs_open_on_console_startup=1'
-
-[[plugins]]
 #インデント可視化
 repo = 'Yggdroot/indentLine'
 
