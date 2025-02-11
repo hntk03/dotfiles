@@ -26,65 +26,45 @@ set incsearch "インクリメンタルサーチ．一文字入力ごとに検�
 "for clipboard
 set clipboard+=unnamed
 
-"tex 勝手に変換されるのを直す
-let g:tex_conceal = ''
+"Plugin Manager
+packadd vim-jetpack
+call jetpack#begin()
+Jetpack 'tani/vim-jetpack', {'opt': 1} "bootstrap
+Jetpack 'mattn/sonictemplate-vim' "template
+Jetpack 'tyru/caw.vim.git' "multiline commentout
+Jetpack 'wuelnerdotexe/vim-astro' "astro syntax highlight
+Jetpack 'cohama/lexima.vim' "auto brackets
+Jetpack 'dense-analysis/ale' "ALE
+call jetpack#end()
 
+"Plugin sonictemplate
+let g:sonictemplate_vim_template_dir = [
+      \ '~/.vim/template'
+      \]
 
-let g:python3_host_prog = $PYENV_ROOT . '/shims/python3'
+"Plugin caw.vim.git
+nmap <C-K> <Plug>(caw:hatpos:toggle)
+vmap <C-K> <Plug>(caw:hatpos:toggle)
 
-"dein
-"Scripts-----------------------------------------------------------------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
+"Plugin ale
+let g:ale_virtualtext_cursor = 'disabled'
+let g:ale_sign_column_always = 1
+let g:ale_completion_enabled = 1
+let g:ale_sign_error = '⨉'
+let g:ale_sign_warning = '⚠'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
+let g:ale_linters = {
+		\   'cpp' : ['gcc']
+\}
 
-let s:dein_path = expand('~/.vim/dein')
-let s:dein_repo_path = s:dein_path . '/repos/github.com/Shougo/dein.vim'
-
-" dein.vim がなければ github からclone
-if &runtimepath !~# '/dein.vim'
-  if !isdirectory(s:dein_repo_path)
-    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_path
-  endif
-  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_path, ':p')
-endif
-
-if dein#load_state(s:dein_path)
-  call dein#begin(s:dein_path)
-
-  let g:config_dir  = expand('~/.vim/dein/userconfig')
-  let s:toml        = g:config_dir . '/plugins.toml'
-  let s:lazytoml   = g:config_dir . '/pluginslazy.toml'
-
-  " TOML 読み込み
-  call dein#load_toml(s:toml,      {'lazy': 0})
-  call dein#load_toml(s:lazytoml, {'lazy': 1})
-
-  call dein#end()
-  call dein#save_state()
-endif
-
+"Plugin vim-astro
+let g:astro_typescript = 'enable'
+let g:astro_stylus = 'enable'
 
 " Required:
 filetype plugin indent on
 syntax enable
-
-" インストールされていないプラグインがあればインストールする
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
-"End dein
-"Scripts---------------------------------------------------------------
-
-
-"for latex 
-call lexima#add_rule({'char': '$', 'input_after': '$', 'filetype': 'latex'})
-call lexima#add_rule({'char': '$', 'at': '\%#\$', 'leave': 1, 'filetype': 'latex'})
-call lexima#add_rule({'char': '<BS>', 'at': '\$\%#\$', 'delete': 1, 'filetype': 'latex'})
-
-"ALE
-
 
 "色
 set termguicolors
@@ -102,6 +82,3 @@ if (has("termguicolors"))
 endif
 hi Normal ctermbg=NONE guibg=NONE
 
-" enable syntax highlighting .astro
-let g:astro_typescript = 'enable'
-let g:astro_stylus = 'enable'
