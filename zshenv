@@ -10,20 +10,11 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-
 export TERM=xterm-256color
-
 
 #nodebrew path
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
-
-#go path
-if [ -x "`which go`" ]; then
-    export GOPATH=$HOME/.go
-    export PATH=$PATH:$GOPATH/bin
-fi
-
-#Android NDK
-NDK_ROOT=$HOME/ndk
-export PATH=$PATH:${NDK_ROOT}
+#Homebrew
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"

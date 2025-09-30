@@ -54,6 +54,7 @@ let g:ale_sign_error = '⨉'
 let g:ale_sign_warning = '⚠'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
+let g:ale_cpp_cc_options = "-Wall -std=c++20"
 let g:ale_linters = {
 		\   'cpp' : ['gcc']
 \}
@@ -81,4 +82,3 @@ if (has("termguicolors"))
  set termguicolors
 endif
 hi Normal ctermbg=NONE guibg=NONE
-
