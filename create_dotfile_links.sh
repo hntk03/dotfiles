@@ -23,4 +23,4 @@ ln -sv "$CURRENT_DIR/pluginslazy.toml" "$HOME/.vim/dein/userconfig"
 ln -sv "$CURRENT_DIR/vimrc" "$HOME/.vimrc"
 
 ln -sv "$CURRENT_DIR/zpreztorc" "$HOME/.zpreztorc"
-ln -sv "$CURRENT_DIR/zshenv" "$HOME/.zshenv"
+ln -sv "$CURRENT_DIR/zshrc" "$HOME/.zshrc"
