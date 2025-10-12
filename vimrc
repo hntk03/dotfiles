@@ -19,6 +19,11 @@ set shiftwidth=2
 set autoindent "改行時に前の行のインデントを継続する
 set wildmenu
 set completeopt=menu,menuone,noselect
+set expandtab
+
+"タブ、空白、改行の可視化
+set list
+set listchars=tab:>.,trail:_,eol:↲,extends:>,precedes:<,nbsp:%
 
 "for search
 set incsearch "インクリメンタルサーチ．一文字入力ごとに検索を行う．
