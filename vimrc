@@ -63,6 +63,8 @@ let g:ale_cpp_cc_options = "-Wall -std=c++20"
 let g:ale_linters = {
 		\   'cpp' : ['gcc']
 \}
+let g:ale_fixers = { 'cpp' : ['clang-format'] }
+let g:ale_fix_on_save = 1
 
 "Plugin vim-astro
 let g:astro_typescript = 'enable'
@@ -87,16 +89,3 @@ if (has("termguicolors"))
  set termguicolors
 endif
 hi Normal ctermbg=NONE guibg=NONE
-
- 
-"clang-format 自動整形
-if has('python3')
-  function! Formatonsave()
-    py3f /opt/homebrew/opt/llvm/share/clang/clang-format.py
-  endfunction
-
-  augroup clangformat
-    autocmd!
-    autocmd BufWritePre *.{h,hpp,c,cc,cpp} call Formatonsave()
-  augroup END
-endif
