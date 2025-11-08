@@ -22,3 +22,10 @@ export PATH="/opt/homebrew/opt/libiconv/bin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+source $HOME/.rvm/scripts/rvm
+
+# vim
+export PATH="/opt/homebrew/opt/vim/bin:$PATH"
+source $HOME/.rvm/scripts/rvm
+source $HOME/.rvm/scripts/rvm
+source $HOME/.rvm/scripts/rvm
