@@ -63,6 +63,7 @@ let g:ale_cpp_cc_options = "-Wall -std=c++20"
 let g:ale_linters = {
 \   'cpp': ['gcc', 'cppcheck'],
 \   'markdown': ['markdownlint', 'textlint'],
+\   'python': ['ruff', 'mypy']
 \}
 let g:ale_fixers = { 
 \ 'cpp': ['clang-format'],
