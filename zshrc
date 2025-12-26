@@ -10,7 +10,6 @@ export CPPFLAGS="-I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/libico
 export LIBS="-liconv"
 export optflags="-O2 -fno-fast-math -ggdb3"
 
-
 export PATH="/opt/homebrew/opt/libiconv/bin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
@@ -21,3 +20,10 @@ export PATH="/opt/homebrew/opt/vim/bin:$PATH"
 
 # uv
 export PATH="$HOME/.local/bin:$PATH"
+
+# gitのブランチ名を常に表示する
+autoload -Uz vcs_info
+precmd() { vcs_info  }
+setopt prompt_subst
+PROMPT='%n@%m %1~ ${vcs_info_msg_0_}%# '
+zstyle ':vcs_info:git:*' formats '(%b)'
