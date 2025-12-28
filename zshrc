@@ -25,5 +25,5 @@ export PATH="$HOME/.local/bin:$PATH"
 autoload -Uz vcs_info
 precmd() { vcs_info  }
 setopt prompt_subst
-PROMPT='%n@%m %1~ ${vcs_info_msg_0_}%# '
+PROMPT='%1~ ${vcs_info_msg_0_}%# '
 zstyle ':vcs_info:git:*' formats '(%b)'
