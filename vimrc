@@ -21,6 +21,14 @@ set wildmenu
 set completeopt=menu,menuone,noselect
 set expandtab
 
+" ステータスラインの表示
+set statusline=%F  " ファイル名を表示
+set statusline+=%m " 変更チェックを表示
+set statusline+=%r " 読み込み専用であるかを表示
+set statusline+=%= " これ以降は右寄せ表示
+set statusline+=[%l/%L] " 現在の行数/全行数
+set laststatus=2   " ステータスラインを常に表示
+
 "タブ、空白、改行の可視化
 set list
 set listchars=tab:>.,trail:_,eol:↲,extends:>,precedes:<,nbsp:%
