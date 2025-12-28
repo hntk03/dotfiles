@@ -66,8 +66,10 @@ let g:ale_linters = {
 \   'python': ['ruff', 'mypy']
 \}
 let g:ale_fixers = { 
+\ 'c': ['clang-format'],
 \ 'cpp': ['clang-format'],
 \ 'markdown': ['prettier'],
+\ 'astro': ['prettier'],
 \}
 let g:ale_fix_on_save = 1
 
