@@ -23,7 +23,6 @@ ln -sv "$CURRENT_DIR/pluginslazy.toml" "$HOME/.vim/dein/userconfig"
 ln -sv "$CURRENT_DIR/vimrc" "$HOME/.vimrc"
 
 # zsh
-ln -sv "$CURRENT_DIR/zpreztorc" "$HOME/.zpreztorc"
 ln -sv "$CURRENT_DIR/zshrc" "$HOME/.zshrc"
 
 # clang-format
