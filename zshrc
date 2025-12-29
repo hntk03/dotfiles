@@ -27,3 +27,6 @@ precmd() { vcs_info  }
 setopt prompt_subst
 PROMPT='%1~ ${vcs_info_msg_0_}%# '
 zstyle ':vcs_info:git:*' formats '(%b)'
+
+# エイリアス
+alias gs='git status'
