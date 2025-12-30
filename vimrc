@@ -44,6 +44,8 @@ Jetpack 'tyru/caw.vim.git' "multiline commentout
 Jetpack 'wuelnerdotexe/vim-astro' "astro syntax highlight
 Jetpack 'cohama/lexima.vim' "auto brackets
 Jetpack 'dense-analysis/ale' "ALE
+Jetpack 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Jetpack 'junegunn/fzf.vim'
 call jetpack#end()
 
 "Plugin sonictemplate
