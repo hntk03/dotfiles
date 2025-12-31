@@ -30,6 +30,7 @@ zstyle ':vcs_info:git:*' formats '(%b)'
 
 # エイリアス
 alias gs='git status'
+alias ls='ls -G'
 
 # fzf
 source <(fzf --zsh)
