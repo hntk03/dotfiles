@@ -21,6 +21,9 @@ export PATH="/opt/homebrew/opt/vim/bin:$PATH"
 # uv
 export PATH="$HOME/.local/bin:$PATH"
 
+# color for tig and etc
+export TERM=xterm
+
 # gitのブランチ名を常に表示する
 autoload -Uz vcs_info
 precmd() { vcs_info  }
