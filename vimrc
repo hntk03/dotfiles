@@ -67,8 +67,8 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 let g:ale_cpp_cc_options = "-Wall -std=c++20"
 let g:ale_linters = {
-\   'c': ['gcc', 'cppcheck'],
-\   'cpp': ['gcc', 'cppcheck'],
+\   'c': ['gcc', 'cppcheck', 'clangtidy'],
+\   'cpp': ['gcc', 'cppcheck', 'clangtidy'],
 \   'markdown': ['markdownlint', 'textlint'],
 \   'python': ['ruff', 'mypy']
 \}
