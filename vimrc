@@ -81,6 +81,7 @@ let g:ale_fixers = {
 \ 'javascript': ['prettier'],
 \ 'astro': ['prettier'],
 \ 'css': ['prettier'],
+\ 'sh': ['shfmt'],
 \}
 let g:ale_fix_on_save = 1
 
