@@ -46,6 +46,7 @@ Jetpack 'cohama/lexima.vim' "auto brackets
 Jetpack 'dense-analysis/ale' "ALE
 Jetpack 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Jetpack 'junegunn/fzf.vim'
+Jetpack 'jacoborus/tender.vim' "colorscheme
 call jetpack#end()
 
 "Plugin sonictemplate
