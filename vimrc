@@ -47,6 +47,7 @@ Jetpack 'dense-analysis/ale' "ALE
 Jetpack 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Jetpack 'junegunn/fzf.vim'
 Jetpack 'jacoborus/tender.vim' "colorscheme
+Jetpack 'itchyny/lightline.vim'
 call jetpack#end()
 
 "Plugin sonictemplate
@@ -86,6 +87,9 @@ let g:ale_fix_on_save = 1
 "Plugin vim-astro
 let g:astro_typescript = 'enable'
 let g:astro_stylus = 'enable'
+
+" set lighline theme inside lightline config
+let g:lightline = { 'colorscheme': 'tender' }
 
 " Required:
 filetype plugin indent on
