@@ -1,0 +1,30 @@
+---
+Checks: '-*,
+  clang-analyzer-*,
+  performance-*,
+  readability-*,
+  modernize-*,
+  cppcoreguidelines-*,
+
+  bugprone-*,
+  -bugprone-easily-swappable-parameters,
+  '
+WarningsAsErrors: ''
+HeaderFileExtensions:
+  - ''
+  - h
+  - hh
+  - hpp
+  - hxx
+ImplementationFileExtensions:
+  - c
+  - cc
+  - cpp
+  - cxx
+HeaderFilterRegex: ''
+ExcludeHeaderFilterRegex: ''
+FormatStyle:     none
+CheckOptions:    {}
+SystemHeaders:   false
+...
+

@@ -24,3 +24,6 @@ ln -sv "$CURRENT_DIR/zshrc" "$HOME/.zshrc"
 
 # clang-format
 ln -sv "$CURRENT_DIR/clang-format" "$HOME/.clang-format"
+
+# clang-tidy
+ln -sv "$CURRENT_DIR/clang-tidy" "$HOME/.clang-tidy"
