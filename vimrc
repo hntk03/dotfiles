@@ -21,6 +21,9 @@ set wildmenu
 set completeopt=menu,menuone,noselect
 set expandtab
 
+" 補間
+set autocomplete
+
 " ステータスラインの表示
 set statusline=%F%m\ %=%c%V\ [%l/%L(%p%%)]
 set laststatus=2 " ステータスラインを常に表示
