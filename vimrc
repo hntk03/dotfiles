@@ -1,15 +1,6 @@
 set number
 set title
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
-highlight LineNr ctermbg=none
-highlight Folded ctermbg=none
-highlight EndOfBuffer ctermbg=none
-let g:hybrid_use_iTerm_colors = 1
-set t_Co=256
-syntax on
 set cursorline
-"set mouse=a
 set scrolloff=8
 set backspace=indent,eol,start
 set encoding=utf-8
@@ -92,25 +83,12 @@ let g:ale_fix_on_save = 1
 let g:astro_typescript = 'enable'
 let g:astro_stylus = 'enable'
 
-" set lighline theme inside lightline config
-let g:lightline = { 'colorscheme': 'tender' }
-
 " Required:
 filetype plugin indent on
-syntax enable
-
-"色
-set termguicolors
-" $TERMがxterm以外のときは以下を設定する必要がある。
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum" " 文字色
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum" " 背景色
-
 
 syntax enable
-colorscheme tender
-" set lighline theme inside lightline config
-let g:lightline = { 'colorscheme': 'tender' }
 if (has("termguicolors"))
  set termguicolors
 endif
-hi Normal ctermbg=NONE guibg=NONE
+colorscheme tender
+let g:lightline = { 'colorscheme': 'tender' }
