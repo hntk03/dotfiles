@@ -23,6 +23,10 @@ set laststatus=2 " ステータスラインを常に表示
 set list
 set listchars=tab:>.,trail:_,eol:↲,extends:>,precedes:<,nbsp:%
 
+" 新しいウィンドウ下、右に開く
+set splitbelow
+set splitright
+
 "for search
 set incsearch "インクリメンタルサーチ．一文字入力ごとに検索を行う．
 
