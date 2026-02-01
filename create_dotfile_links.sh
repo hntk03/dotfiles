@@ -3,27 +3,34 @@
 CURRENT_DIR=$(pwd)
 CONFIG_DIR="$HOME/.config"
 
+set_link_in_config () {
+  local app_name=$1
+  local file_name=$2
+
+  local app_config_dir="$CONFIG_DIR/$app_name"
+  mkdir -p "$app_config_dir"
+  ln -s "$CURRENT_DIR/$file_name" "$app_config_dir/$file_name"
+}
+
 # .configファイルを作成
-mkdir -pv $CONFIG_DIR
+mkdir -p $CONFIG_DIR
 
-# Alacritty 
-CONFIG_ALACRITTY_DIR="$CONFIG_DIR/alacritty"
-
-mkdir -pv $CONFIG_ALACRITTY_DIR
-ln -sv "$CURRENT_DIR/alacritty.toml" "$CONFIG_ALACRITTY_DIR"
+# Alacritty
+set_link_in_config alacritty alacritty.toml
 
 # tmux
-ln -sv "$CURRENT_DIR/tmux.conf" "$HOME/.tmux.conf"
+set_link_in_config tmux .tmux.conf
 
 # vim
-ln -sv "$CURRENT_DIR/template" "$HOME/.vim"
-ln -sv "$CURRENT_DIR/vimrc" "$HOME/.vimrc"
+mkdir -p "$HOME/.vim"
+ln -s "$CURRENT_DIR/template" "$HOME/.vim/template"
+ln -s "$CURRENT_DIR/vimrc" "$HOME/.vimrc"
 
 # zsh
-ln -sv "$CURRENT_DIR/zshrc" "$HOME/.zshrc"
+ln -s "$CURRENT_DIR/zshrc" "$HOME/.zshrc"
 
 # clang-format
-ln -sv "$CURRENT_DIR/clang-format" "$HOME/.clang-format"
+ln -s "$CURRENT_DIR/clang-format" "$HOME/.clang-format"
 
 # clang-tidy
-ln -sv "$CURRENT_DIR/clang-tidy" "$HOME/.clang-tidy"
+ln -s "$CURRENT_DIR/clang-tidy" "$HOME/.clang-tidy"
