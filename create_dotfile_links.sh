@@ -26,6 +26,9 @@ mkdir -p "$HOME/.vim"
 ln -s "$CURRENT_DIR/template" "$HOME/.vim/template"
 ln -s "$CURRENT_DIR/vimrc" "$HOME/.vimrc"
 
+#neovim
+ln -s "$CURRENT_DIR/nvim" "$CONFIG_DIR/nvim"
+
 # zsh
 ln -s "$CURRENT_DIR/zshrc" "$HOME/.zshrc"
 
