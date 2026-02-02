@@ -38,6 +38,9 @@ require('jetpack.paq') {
   {'nvim-treesitter/nvim-treesitter'}, -- syntax highlight
   {'jacoborus/tender.vim'}, -- colorscheme
   {'itchyny/lightline.vim'}, -- ステータスバー
+  {'neovim/nvim-lspconfig'}, -- lsp
 }
+
+vim.lsp.enable('clangd')
 
 vim.cmd("colorscheme tender")
