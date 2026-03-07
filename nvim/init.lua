@@ -64,6 +64,7 @@ vim.g.ale_fixers = {
  astro = {'prettier'},
  css = {'prettier'},
  sh = {'shfmt'},
+ python = {'ruff_format'},
 }
 vim.g.ale_fix_on_save = 1
 
