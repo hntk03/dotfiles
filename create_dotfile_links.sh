@@ -37,3 +37,6 @@ ln -s "$CURRENT_DIR/clang-format" "$HOME/.clang-format"
 
 # clang-tidy
 ln -s "$CURRENT_DIR/clang-tidy" "$HOME/.clang-tidy"
+
+# tig
+ln -s "$CURRENT_DIR/tigrc" "$HOME/.tigrc"

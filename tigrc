@@ -1,0 +1,4 @@
+set main-view = date:default,local=yes author:full,width=15 id commit-title:graph=v2,refs=yes
+
+set refresh-mode = auto
+set diff-highlight = true
