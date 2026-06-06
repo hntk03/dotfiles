@@ -4,11 +4,11 @@ My macOS dotfiles
 
 ## Tools
 
-- Editor: [neovim](https://github.com/neovim/neovim)
-- Terminal Emulator: [Alacritty](https://github.com/alacritty/alacritty)
+- Editor: [neovim](https://neovim.io/)
+- Terminal Emulator: [Alacritty](https://alacritty.org/)
 - Terminal Multiplexer: [tmux](https://github.com/tmux/tmux)
-- Git TUI: [tig](https://github.com/jonas/tig)
-- Shell: [zsh]
+- Git TUI: [tig](https://jonas.github.io/tig/)
+- Shell: [Zsh](https://www.zsh.org/)
 
 ## Installation
 
