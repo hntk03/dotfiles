@@ -5,7 +5,7 @@ export LIBS="-liconv"
 export optflags="-O2 -fno-fast-math -ggdb3"
 
 # color for tig and etc
-export TERM=xterm
+export TERM=xterm-256color
 
 # gitのブランチ名を常に表示する
 autoload -Uz vcs_info
