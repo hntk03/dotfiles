@@ -31,6 +31,7 @@ ln -s "$CURRENT_DIR/nvim" "$CONFIG_DIR/nvim"
 
 # zsh
 ln -s "$CURRENT_DIR/zshrc" "$HOME/.zshrc"
+ln -s "$CURRENT_DIR/zshenv" "$HOME/.zshenv"
 
 # clang-format
 ln -s "$CURRENT_DIR/clang-format" "$HOME/.clang-format"
