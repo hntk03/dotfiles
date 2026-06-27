@@ -16,6 +16,7 @@ zstyle ':vcs_info:git:*' formats '(%b)'
 
 # エイリアス
 alias gs='git status'
+alias gb='git branch'
 alias ls='ls -G'
 
 # fzf
