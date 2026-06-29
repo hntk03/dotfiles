@@ -76,5 +76,9 @@ vim.g.astro_stylus = 'enable'
 
 vim.lsp.enable('clangd')
 
+vim.keymap.set("n", "grd", vim.lsp.buf.definition, {
+  desc = "Go to definition",
+})
+
 vim.cmd("colorscheme tender")
 vim.g.lightline = { colorscheme = 'tender' }
