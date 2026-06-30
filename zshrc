@@ -19,5 +19,8 @@ alias gs='git status'
 alias gb='git branch'
 alias ls='ls -G'
 
+# mise
+eval "$(mise activate zsh)"
+
 # fzf
 source <(fzf --zsh)

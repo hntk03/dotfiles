@@ -21,6 +21,9 @@ set_link_in_config alacritty alacritty.toml
 # tmux
 set_link_in_config tmux tmux.conf
 
+# mise
+ln -s "$CURRENT_DIR/mise-config" "$CONFIG_DIR/mise"
+
 # vim
 mkdir -p "$HOME/.vim"
 ln -s "$CURRENT_DIR/template" "$HOME/.vim/template"
