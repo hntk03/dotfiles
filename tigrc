@@ -16,3 +16,5 @@ bind diff h scroll-left
 bind diff l scroll-right
 bind stage h scroll-left
 bind stage l scroll-right
+
+bind main T ?git tag -a "%(prompt Enter tag name: )" %(commit)
