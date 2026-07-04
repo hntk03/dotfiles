@@ -2,3 +2,17 @@ set main-view = date:default,local=yes author:full,width=10 id commit-title:grap
 
 set refresh-mode = auto
 set diff-highlight = true
+
+bind generic g move-first-line
+bind generic G move-last-line
+
+bind generic <Ctrl-f> move-page-down
+bind generic <Ctrl-b> move-page-up
+
+bind generic n find-next
+bind generic N find-prev
+
+bind diff h scroll-left
+bind diff l scroll-right
+bind stage h scroll-left
+bind stage l scroll-right
