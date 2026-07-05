@@ -19,7 +19,7 @@ mkdir -p $CONFIG_DIR
 set_link_in_config alacritty alacritty.toml
 
 # tmux
-set_link_in_config tmux tmux.conf
+ln -s "$CURRENT_DIR/tmux" "$CONFIG_DIR/tmux"
 
 # mise
 ln -s "$CURRENT_DIR/mise-config" "$CONFIG_DIR/mise"
