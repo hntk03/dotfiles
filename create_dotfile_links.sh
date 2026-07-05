@@ -27,18 +27,8 @@ ln -s "$CURRENT_DIR/mise-config" "$CONFIG_DIR/mise"
 #neovim
 ln -s "$CURRENT_DIR/nvim" "$CONFIG_DIR/nvim"
 
-# zsh
-ln -s "$CURRENT_DIR/zshrc" "$HOME/.zshrc"
-ln -s "$CURRENT_DIR/zshenv" "$HOME/.zshenv"
+files=(".clang-format" ".clang-tidy" ".editorconfig" ".tigrc" ".zshenv" ".zshrc")
 
-# clang-format
-ln -s "$CURRENT_DIR/clang-format" "$HOME/.clang-format"
-
-# clang-tidy
-ln -s "$CURRENT_DIR/clang-tidy" "$HOME/.clang-tidy"
-
-# EditorConfig
-ln -s "$CURRENT_DIR/editorconfig" "$HOME/.editorconfig"
-
-# tig
-ln -s "$CURRENT_DIR/tigrc" "$HOME/.tigrc"
+for file in ${files[@]}; do
+  ln -s "$CURRENT_DIR/$file" "$HOME/$file"
+done
