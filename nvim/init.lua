@@ -75,8 +75,12 @@ vim.g.ale_fix_on_save = 1
 vim.g.astro_typescript = 'enable'
 vim.g.astro_stylus = 'enable'
 
-vim.lsp.enable('clangd')
+-- sonictemplate
+vim.g.sonictemplate_vim_template_dir = {
+  '~/.config/nvim/templates',
+}
 
+vim.lsp.enable('clangd')
 vim.keymap.set("n", "grd", vim.lsp.buf.definition, {
   desc = "Go to definition",
 })
