@@ -18,5 +18,6 @@ bind stage h scroll-left
 bind stage l scroll-right
 
 bind main T ?git tag -a "%(prompt Enter tag name: )" %(commit)
+bind main p ?git push origin %(branch)
 bind refs d ?git branch -D %(branch)
 bind refs s ?git switch %(branch)
