@@ -3,6 +3,9 @@ set main-view = date:default,local=yes author:full,width=10 id commit-title:grap
 set refresh-mode = auto
 set diff-highlight = true
 
+set vertical-split = no
+set split-view-height = 80%
+
 bind generic g move-first-line
 bind generic G move-last-line
 
