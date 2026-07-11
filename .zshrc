@@ -18,6 +18,7 @@ zstyle ':vcs_info:git:*' formats '(%b)'
 alias gs='git status'
 alias gb='git branch'
 alias ls='ls -G'
+alias npm='echo use pnpm'
 
 # mise
 eval "$(mise activate zsh)"
