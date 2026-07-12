@@ -15,17 +15,14 @@ set_link_in_config() {
 # .configファイルを作成
 mkdir -p $CONFIG_DIR
 
-# Alacritty
-ln -s "$CURRENT_DIR/alacritty" "$CONFIG_DIR/alacritty"
-
-# tmux
-ln -s "$CURRENT_DIR/tmux" "$CONFIG_DIR/tmux"
-
 # mise
 ln -s "$CURRENT_DIR/mise-config" "$CONFIG_DIR/mise"
 
-#neovim
-ln -s "$CURRENT_DIR/nvim" "$CONFIG_DIR/nvim"
+directories=("alacritty" "tmux" "nvim")
+
+for d in ${directories[@]}; do
+  ln -s "$CURRENT_DIR/$d" "$CONFIG_DIR/$d"
+done
 
 files=(".clang-format" ".clang-tidy" ".editorconfig" ".tigrc" ".zshenv" ".zshrc")
 
