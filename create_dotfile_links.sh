@@ -16,7 +16,7 @@ set_link_in_config() {
 mkdir -p $CONFIG_DIR
 
 # Alacritty
-set_link_in_config alacritty alacritty.toml
+ln -s "$CURRENT_DIR/alacritty" "$CONFIG_DIR/alacritty"
 
 # tmux
 ln -s "$CURRENT_DIR/tmux" "$CONFIG_DIR/tmux"

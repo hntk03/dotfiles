@@ -1,6 +1,6 @@
 [general]
 import = [
-  "~/.config/alacritty/themes/alacritty-theme/themes/tender.toml"
+  "~/.config/alacritty/theme.toml"
 ]
 
 [env]
