@@ -29,7 +29,7 @@ vim.cmd('packadd vim-jetpack')
 require('jetpack.paq') {
   {'tani/vim-jetpack'}, -- bootstrap
   {'mattn/sonictemplate-vim'}, -- template
-  {'numToStr/Comment.nvim' }, -- comment 
+  {'numToStr/Comment.nvim' }, -- comment
   {'wuelnerdotexe/vim-astro'}, -- astro syntax highlight
   {'cohama/lexima.vim'}, -- 自動括弧
   {'dense-analysis/ale'}, -- ALE
@@ -56,7 +56,7 @@ vim.g.ale_linters = {
    markdown = {'markdownlint', 'textlint'},
    python = {'ruff', 'mypy'},
 }
-vim.g.ale_fixers = { 
+vim.g.ale_fixers = {
  c = {'clang-format'},
  cpp = {'clang-format'},
  markdown = {'prettier'},
