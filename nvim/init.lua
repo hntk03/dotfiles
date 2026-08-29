@@ -21,6 +21,11 @@ vim.opt.list = true
 -- 検索
 vim.opt.incsearch = true
 
+-- 補間
+vim.opt.autocomplete = true
+vim.o.autocompletedelay = 250
+vim.opt.completeopt = { 'menu', 'popup' }
+
 -- クリップボード
 vim.opt.clipboard:append( { "unnamed" } )
 
