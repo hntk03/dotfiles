@@ -8,6 +8,8 @@ Checks: '-*,
 
   bugprone-*,
   -bugprone-easily-swappable-parameters,
+  -modernize-use-trailing-return-type,
+  -readability-identifier-length,
   '
 WarningsAsErrors: ''
 HeaderFileExtensions:
