@@ -81,7 +81,7 @@ vim.g.sonictemplate_vim_template_dir = {
   '~/.config/nvim/templates',
 }
 
-vim.lsp.enable('clangd')
+vim.lsp.enable({ 'clangd', 'gopls' })
 vim.keymap.set("n", "grd", vim.lsp.buf.definition, {
   desc = "Go to definition",
 })
