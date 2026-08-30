@@ -8,7 +8,6 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.autoindent = true
 vim.opt.wildmenu = true
-vim.opt.completeopt = menu,menuone,noselect
 vim.opt.expandtab = true
 
 -- ステータスラインの表示
