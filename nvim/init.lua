@@ -2,11 +2,9 @@ vim.opt.number = true
 vim.opt.title = true
 vim.opt.cursorline = true
 vim.opt.scrolloff = 8
-vim.opt.backspace = indent,eol,start
-vim.opt.encoding = "utf-8"
+vim.opt.backspace = "indent,eol,start"
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
-vim.opt.autoindent = true
 vim.opt.wildmenu = true
 vim.opt.expandtab = true
 
@@ -39,7 +37,6 @@ require('jetpack.paq') {
   {'dense-analysis/ale'}, -- ALE
   {'junegunn/fzf', run = './install' },
   {'junegunn/fzf.vim'},
-  {'nvim-treesitter/nvim-treesitter'}, -- syntax highlight
   {'jacoborus/tender.vim'}, -- colorscheme
   {'itchyny/lightline.vim'}, -- ステータスバー
   {'neovim/nvim-lspconfig'}, -- lsp
@@ -48,7 +45,6 @@ require('jetpack.paq') {
 -- ALE
 vim.g.ale_virtualtext_cursor = 'disabled'
 vim.g.ale_sign_column_always = 1
-vim.g.ale_completion_enabled = 1
 vim.g.ale_sign_error = '⨉'
 vim.g.ale_sign_warning = '⚠'
 vim.g.ale_echo_msg_format = '[%linter%] %s [%severity%]'
