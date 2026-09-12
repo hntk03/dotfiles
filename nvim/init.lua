@@ -11,7 +11,7 @@ vim.opt.expandtab = true
 vim.opt.laststatus = 2
 
 -- タブ、空白、改行の可視化
-vim.opt.listchars = { tab = ">.", trail = "_", eol = "↲", }
+vim.opt.listchars = { tab = ">.", trail = "_", eol = "↲" }
 vim.opt.list = true
 
 -- 検索
@@ -20,68 +20,68 @@ vim.opt.incsearch = true
 -- 補間
 vim.opt.autocomplete = true
 vim.o.autocompletedelay = 250
-vim.opt.completeopt = { 'menu', 'popup', 'noselect' }
+vim.opt.completeopt = { "menu", "popup", "noselect" }
 
 -- クリップボード
-vim.opt.clipboard:append( { "unnamed" } )
+vim.opt.clipboard:append({ "unnamed" })
 
 -- プラグインマネージャー
-vim.cmd('packadd vim-jetpack')
-require('jetpack.paq') {
-  {'tani/vim-jetpack'}, -- bootstrap
-  {'mattn/sonictemplate-vim'}, -- template
-  {'numToStr/Comment.nvim' }, -- comment
-  {'wuelnerdotexe/vim-astro'}, -- astro syntax highlight
-  {'cohama/lexima.vim'}, -- 自動括弧
-  {'dense-analysis/ale'}, -- ALE
-  {'junegunn/fzf', run = './install' },
-  {'junegunn/fzf.vim'},
-  {'jacoborus/tender.vim'}, -- colorscheme
-  {'itchyny/lightline.vim'}, -- ステータスバー
-  {'neovim/nvim-lspconfig'}, -- lsp
-}
+vim.cmd("packadd vim-jetpack")
+require("jetpack.paq")({
+  { "tani/vim-jetpack" }, -- bootstrap
+  { "mattn/sonictemplate-vim" }, -- template
+  { "numToStr/Comment.nvim" }, -- comment
+  { "wuelnerdotexe/vim-astro" }, -- astro syntax highlight
+  { "cohama/lexima.vim" }, -- 自動括弧
+  { "dense-analysis/ale" }, -- ALE
+  { "junegunn/fzf", run = "./install" },
+  { "junegunn/fzf.vim" },
+  { "jacoborus/tender.vim" }, -- colorscheme
+  { "itchyny/lightline.vim" }, -- ステータスバー
+  { "neovim/nvim-lspconfig" }, -- lsp
+})
 
 -- ALE
-vim.g.ale_virtualtext_cursor = 'disabled'
+vim.g.ale_virtualtext_cursor = "disabled"
 vim.g.ale_sign_column_always = 1
-vim.g.ale_sign_error = '⨉'
-vim.g.ale_sign_warning = '⚠'
-vim.g.ale_echo_msg_format = '[%linter%] %s [%severity%]'
-vim.g.ale_statusline_format = {'⨉ %d', '⚠ %d', '⬥ ok'}
+vim.g.ale_sign_error = "⨉"
+vim.g.ale_sign_warning = "⚠"
+vim.g.ale_echo_msg_format = "[%linter%] %s [%severity%]"
+vim.g.ale_statusline_format = { "⨉ %d", "⚠ %d", "⬥ ok" }
 vim.g.ale_cpp_cc_options = "-Wall -std=c++20"
 vim.g.ale_linters = {
-   c = {'gcc', 'cppcheck', 'clangtidy'},
-   cpp = {'gcc', 'cppcheck', 'clangtidy'},
-   markdown = {'markdownlint', 'textlint'},
-   python = {'ruff', 'mypy'},
+  c = { "gcc", "cppcheck", "clangtidy" },
+  cpp = { "gcc", "cppcheck", "clangtidy" },
+  markdown = { "markdownlint", "textlint" },
+  python = { "ruff", "mypy" },
 }
 vim.g.ale_fixers = {
- c = {'clang-format'},
- cpp = {'clang-format'},
- markdown = {'prettier'},
- javascript = {'prettier'},
- typescript = {'prettier'},
- typescriptreact = {'prettier'},
- astro = {'prettier'},
- css = {'prettier'},
- sh = {'shfmt'},
- python = {'ruff_format'},
- go = {'gofmt'},
+  c = { "clang-format" },
+  cpp = { "clang-format" },
+  markdown = { "prettier" },
+  javascript = { "prettier" },
+  typescript = { "prettier" },
+  typescriptreact = { "prettier" },
+  astro = { "prettier" },
+  css = { "prettier" },
+  sh = { "shfmt" },
+  python = { "ruff_format" },
+  go = { "gofmt" },
   lua = { "stylua" },
 }
-vim.g.ale_markdown_markdownlint_executable = 'markdownlint-cli2'
+vim.g.ale_markdown_markdownlint_executable = "markdownlint-cli2"
 vim.g.ale_fix_on_save = 1
 
 -- vim-astro
-vim.g.astro_typescript = 'enable'
-vim.g.astro_stylus = 'enable'
+vim.g.astro_typescript = "enable"
+vim.g.astro_stylus = "enable"
 
 -- sonictemplate
 vim.g.sonictemplate_vim_template_dir = {
-  '~/.config/nvim/templates',
+  "~/.config/nvim/templates",
 }
 
-vim.lsp.enable({ 'clangd', 'gopls' })
+vim.lsp.enable({ "clangd", "gopls" })
 vim.keymap.set("n", "grd", vim.lsp.buf.definition, {
   desc = "Go to definition",
 })
@@ -103,4 +103,4 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 vim.cmd("colorscheme tender")
-vim.g.lightline = { colorscheme = 'tender' }
+vim.g.lightline = { colorscheme = "tender" }
