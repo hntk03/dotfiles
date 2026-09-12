@@ -67,6 +67,7 @@ vim.g.ale_fixers = {
  sh = {'shfmt'},
  python = {'ruff_format'},
  go = {'gofmt'},
+  lua = { "stylua" },
 }
 vim.g.ale_markdown_markdownlint_executable = 'markdownlint-cli2'
 vim.g.ale_fix_on_save = 1
