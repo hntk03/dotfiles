@@ -39,6 +39,7 @@ require("jetpack.paq")({
   { "jacoborus/tender.vim" }, -- colorscheme
   { "itchyny/lightline.vim" }, -- ステータスバー
   { "neovim/nvim-lspconfig" }, -- lsp
+  { "hntk03/bitview.nvim" },
 })
 
 -- ALE
