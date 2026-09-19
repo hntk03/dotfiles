@@ -42,6 +42,7 @@ require("jetpack.paq")({
   { "itchyny/lightline.vim" }, -- ステータスバー
   { "neovim/nvim-lspconfig" }, -- lsp
   { "hntk03/bitview.nvim" },
+  { "lewis6991/gitsigns.nvim" },
 })
 
 -- ALE
@@ -106,3 +107,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 require("colorscheme")
+require("gitsigns").setup({
+  signcolumn = true,
+})
