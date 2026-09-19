@@ -105,5 +105,4 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
-vim.cmd("colorscheme tender")
-vim.g.lightline = { colorscheme = "tender" }
+require("colorscheme")
