@@ -39,7 +39,7 @@ require("jetpack.paq")({
   { "junegunn/fzf", run = "./install" },
   { "junegunn/fzf.vim" },
   { "jacoborus/tender.vim" }, -- colorscheme
-  { "itchyny/lightline.vim" }, -- ステータスバー
+  { "nvim-lualine/lualine.nvim" }, -- ステータスバー
   { "neovim/nvim-lspconfig" }, -- lsp
   { "hntk03/bitview.nvim" },
   { "lewis6991/gitsigns.nvim" },
@@ -108,6 +108,38 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 require("colorscheme")
+
+local colors = require("colors")
+
+local default = { fg = colors.text, bg = colors.grey3 }
+local theme = {
+  normal = {
+    a = default,
+    b = default,
+    c = { fg = colors.yellow1, bg = colors.grey3 },
+    x = default,
+    y = default,
+    z = default,
+  },
+}
+
+require("lualine").setup({
+  options = {
+    theme = theme,
+    icons_enabled = false,
+    component_separators = "",
+    section_separators = "",
+  },
+  sections = {
+    lualine_a = { "diff" },
+    lualine_b = { "diagnostics" },
+    lualine_c = { "filename" },
+    lualine_x = { "encoding", "fileformat", "filetype" },
+    lualine_y = { "progress" },
+    lualine_z = { "location" },
+  },
+})
+
 require("gitsigns").setup({
   signcolumn = true,
 })
