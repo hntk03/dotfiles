@@ -142,6 +142,61 @@ require("lualine").setup({
 
 require("gitsigns").setup({
   signcolumn = true,
+  signs = {
+    add = { text = "+" },
+    change = { text = "~" },
+    delete = { text = "_" },
+    topdelete = { text = "‾" },
+    changedelete = { text = "÷" },
+  },
+  on_attach = function(bufnr)
+    local gitsigns = require("gitsigns")
+
+    local function map(mode, l, r, opts)
+      opts = opts or {}
+      opts.buffer = bufnr
+      vim.keymap.set(mode, l, r, opts)
+    end
+
+    map("n", "]c", function()
+      if vim.wo.diff then
+        vim.cmd.normal({ "]c", bang = true })
+      else
+        gitsigns.nav_hunk("next")
+      end
+    end)
+
+    map("n", "[c", function()
+      if vim.wo.diff then
+        vim.cmd.normal({ "[c", bang = true })
+      else
+        gitsigns.nav_hunk("prev")
+      end
+    end)
+
+    map("n", "<leader>hi", gitsigns.preview_hunk_inline)
+
+    -- Diff
+    map("n", "<leader>hd", function()
+      gitsigns.diffthis()
+    end)
+    map("n", "<leader>hD", function()
+      gitsigns.diffthis("~")
+    end)
+    vim.keymap.set("n", "<leader>hq", function()
+      for _, win in ipairs(vim.api.nvim_tabpage_list_wins(0)) do
+        local buf = vim.api.nvim_win_get_buf(win)
+        local bufname = vim.api.nvim_buf_get_name(buf)
+
+        if bufname:find("^gitsigns://") then
+          vim.api.nvim_win_close(win, true)
+        end
+      end
+    end, { buffer = bufnr, desc = "Close gitsigns diff" })
+
+    -- Preview
+    map("n", "<leader>hp", gitsigns.preview_hunk)
+  end,
 })
 
 require("ibl").setup({
