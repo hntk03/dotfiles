@@ -109,6 +109,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
+vim.keymap.set("n", "<leader>f", "<cmd>Files<CR>")
+vim.keymap.set("n", "<leader>b", "<cmd>Buffers<CR>")
+
 require("colorscheme")
 
 local colors = require("colors")
