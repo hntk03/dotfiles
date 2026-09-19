@@ -27,6 +27,8 @@ vim.opt.completeopt = { "menu", "popup", "noselect" }
 -- クリップボード
 vim.opt.clipboard:append({ "unnamed" })
 
+vim.g.mapleader = " "
+
 -- プラグインマネージャー
 vim.cmd("packadd vim-jetpack")
 require("jetpack.paq")({
