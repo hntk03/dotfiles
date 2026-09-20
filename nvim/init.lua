@@ -15,6 +15,7 @@ vim.opt.laststatus = 2
 -- タブ、空白、改行の可視化
 vim.opt.listchars = { tab = ">.", trail = "_", eol = "↲" }
 vim.opt.list = true
+vim.opt.fillchars = { eob = " " }
 
 -- 検索
 vim.opt.incsearch = true
