@@ -40,7 +40,7 @@ require("jetpack.paq")({
   { "dense-analysis/ale" }, -- ALE
   { "junegunn/fzf", run = "./install" },
   { "junegunn/fzf.vim" },
-  { "jacoborus/tender.vim" }, -- colorscheme
+  { "jacoborus/tender.vim", branch = "lua" }, -- colorscheme
   { "nvim-lualine/lualine.nvim" }, -- ステータスバー
   { "neovim/nvim-lspconfig" }, -- lsp
   { "hntk03/bitview.nvim" },
@@ -114,14 +114,13 @@ vim.keymap.set("n", "<leader>b", "<cmd>Buffers<CR>")
 
 require("colorscheme")
 
-local colors = require("colors")
-
-local default = { fg = colors.text, bg = colors.grey3 }
+local palette = require("tender.palette").get()
+local default = { fg = palette.text, bg = palette.grey3 }
 local theme = {
   normal = {
     a = default,
     b = default,
-    c = { fg = colors.yellow1, bg = colors.grey3 },
+    c = { fg = palette.yellow1, bg = palette.grey3 },
     x = default,
     y = default,
     z = default,
