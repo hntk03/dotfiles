@@ -6,8 +6,8 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.wildmenu = true
 vim.opt.expandtab = true
-vim.opt.fileencodings = "utf-8,sjis"
-vim.opt.fileformats = "unix,dos,mac"
+vim.opt.fileencodings = { "utf-8", "sjis" }
+vim.opt.fileformats = { "unix", "dos", "mac" }
 
 -- ステータスラインの表示
 vim.opt.laststatus = 2
