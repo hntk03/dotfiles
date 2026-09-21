@@ -121,7 +121,7 @@ local theme = {
   normal = {
     a = default,
     b = default,
-    c = { fg = palette.yellow1, bg = palette.grey3 },
+    c = default,
     x = default,
     y = default,
     z = default,
@@ -136,12 +136,8 @@ require("lualine").setup({
     section_separators = "",
   },
   sections = {
-    lualine_a = { "diff" },
-    lualine_b = { "diagnostics" },
-    lualine_c = { "filename" },
-    lualine_x = { "encoding", "fileformat", "filetype" },
-    lualine_y = { "progress" },
-    lualine_z = { "location" },
+    lualine_a = {},
+    lualine_b = { "diff", "diagnostics" },
   },
 })
 
