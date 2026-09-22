@@ -12,8 +12,8 @@ vim.opt.fileformats = { "unix", "dos", "mac" }
 -- ステータスラインの表示
 vim.opt.laststatus = 2
 
--- タブ、空白、改行の可視化
-vim.opt.listchars = { tab = ">.", trail = "_", eol = "↲" }
+-- タブ、空白
+vim.opt.listchars = { tab = ">.", trail = "_" }
 vim.opt.list = true
 vim.opt.fillchars = { eob = " " }
 
