@@ -15,7 +15,7 @@ vim.opt.laststatus = 2
 -- タブ、空白
 vim.opt.listchars = { tab = ">.", trail = "_" }
 vim.opt.list = true
-vim.opt.fillchars = { eob = " " }
+vim.opt.fillchars = { eob = " ", diff = " " }
 
 -- 検索
 vim.opt.incsearch = true
