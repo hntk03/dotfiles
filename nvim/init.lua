@@ -150,7 +150,6 @@ require("gitsigns").setup({
     topdelete = { text = "‾" },
     changedelete = { text = "÷" },
   },
-  word_diff = true,
   on_attach = function(bufnr)
     local gitsigns = require("gitsigns")
 
