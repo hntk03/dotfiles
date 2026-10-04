@@ -9,7 +9,7 @@ mkdir -p $CONFIG_DIR
 # mise
 ln -s "$CURRENT_DIR/mise-config" "$CONFIG_DIR/mise"
 
-directories=("alacritty" "tmux" "nvim")
+directories=("alacritty" "tmux" "nvim" "i3")
 
 for d in ${directories[@]}; do
   ln -s "$CURRENT_DIR/$d" "$CONFIG_DIR/$d"
