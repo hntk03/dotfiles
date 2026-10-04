@@ -15,7 +15,7 @@ for d in ${directories[@]}; do
   ln -s "$CURRENT_DIR/$d" "$CONFIG_DIR/$d"
 done
 
-files=(".clang-format" ".clang-tidy" ".editorconfig" ".tigrc" ".zshenv" ".zshrc")
+files=(".clang-format" ".clang-tidy" ".editorconfig" ".tigrc" ".zshenv" ".zshrc" ".gitconfig")
 
 for file in ${files[@]}; do
   ln -s "$CURRENT_DIR/$file" "$HOME/$file"
