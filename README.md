@@ -1,6 +1,6 @@
 # dotfiles
 
-My macOS dotfiles
+My computer dotfiles
 
 ## Tools
 
