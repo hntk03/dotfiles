@@ -207,3 +207,7 @@ require("blink.cmp").setup({
   },
   signature = { enabled = true },
 })
+
+vim.diagnostic.config({
+  virtual_text = true,
+})
