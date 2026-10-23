@@ -20,11 +20,6 @@ vim.opt.fillchars = { eob = " ", diff = " " }
 -- 検索
 vim.opt.incsearch = true
 
--- 補間
-vim.opt.autocomplete = true
-vim.opt.autocompletedelay = 250
-vim.opt.completeopt = { "menu", "popup", "noselect" }
-
 -- クリップボード
 vim.opt.clipboard:append({ "unnamed" })
 
@@ -47,6 +42,7 @@ require("jetpack.paq")({
   { "hntk03/bitview.nvim" },
   { "lewis6991/gitsigns.nvim" },
   { "lukas-reineke/indent-blankline.nvim" },
+  { "saghen/blink.cmp", tag = "v1" }, -- 補完
 })
 
 -- ALE
@@ -92,22 +88,6 @@ vim.g.sonictemplate_vim_template_dir = {
 vim.lsp.enable({ "clangd", "gopls" })
 vim.keymap.set("n", "grd", vim.lsp.buf.definition, {
   desc = "Go to definition",
-})
-vim.api.nvim_create_autocmd("LspAttach", {
-  callback = function(args)
-    local client = vim.lsp.get_client_by_id(args.data.client_id)
-
-    if client and client.name == "clangd" then
-      vim.lsp.completion.enable(true, client.id, args.buf, {
-        autotrigger = true,
-        convert = function(item)
-          return {
-            abbr = item.label:gsub("%b()", ""),
-          }
-        end,
-      })
-    end
-  end,
 })
 
 vim.keymap.set("n", "<leader>f", "<cmd>Files<CR>")
@@ -204,4 +184,29 @@ require("ibl").setup({
   indent = {
     char = "▏",
   },
+})
+
+require("blink.cmp").setup({
+  keymap = { preset = "default" },
+  appearance = {
+    nerd_font_variant = "mono",
+  },
+  completion = {
+    documentation = { auto_show = false },
+    menu = {
+      draw = {
+        columns = {
+          { "label", "label_description", gap = 1 },
+          { "kind" },
+        },
+      },
+    },
+  },
+  sources = {
+    default = { "lsp", "path", "buffer" },
+  },
+  fuzzy = {
+    implementation = "prefer_rust_with_warning",
+  },
+  signature = { enabled = true },
 })
