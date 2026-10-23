@@ -48,10 +48,7 @@ require("jetpack.paq")({
 -- ALE
 vim.g.ale_virtualtext_cursor = "disabled"
 vim.g.ale_sign_column_always = 1
-vim.g.ale_sign_error = "⨉"
-vim.g.ale_sign_warning = "⚠"
 vim.g.ale_echo_msg_format = "[%linter%] %s [%severity%]"
-vim.g.ale_statusline_format = { "⨉ %d", "⚠ %d", "⬥ ok" }
 vim.g.ale_cpp_cc_options = "-Wall -std=c++20"
 vim.g.ale_linters = {
   c = { "gcc", "cppcheck", "clangtidy" },
