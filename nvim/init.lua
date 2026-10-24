@@ -42,7 +42,7 @@ require("jetpack.paq")({
   { "hntk03/bitview.nvim" },
   { "lewis6991/gitsigns.nvim" },
   { "lukas-reineke/indent-blankline.nvim" },
-  { "saghen/blink.cmp", tag = "v1" }, -- 補完
+  { "saghen/blink.cmp", tag = "v1.10.2" }, -- 補完
 })
 
 -- ALE
