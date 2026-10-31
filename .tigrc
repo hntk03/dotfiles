@@ -24,3 +24,16 @@ bind main T ?git tag -a "%(prompt Enter tag name: )" %(commit)
 bind main p ?git push origin %(branch)
 bind refs d ?git branch -D %(branch)
 bind refs s ?git switch %(branch)
+
+# Color scheme inspired by tender
+color default 255 235
+color cursor default  238
+color status default default
+color title-focus 142 default
+color title-blur 81 default
+color search-result 160 default
+color delimiter red default
+
+color date 81 default
+color author 185  default
+color id 180 default
