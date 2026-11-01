@@ -4,6 +4,8 @@ export CPPFLAGS="-I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/libico
 export LIBS="-liconv"
 export optflags="-O2 -fno-fast-math -ggdb3"
 
+export EDITOR=nvim
+
 # color for tig and etc
 export TERM=xterm-256color
 
