@@ -6,11 +6,10 @@ font pango:Source Han Code JP 8
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
-exec --no-startup-id setxkbmap -layout jp
-exec --no-startup-id xmodmap ~/.Xmodmap
-exec --no-startup-id xset r rate 250 30
 exec --no-startup-id xrandr --output DP-1 --primary --auto --output HDMI-1 --auto --right-of DP-1
 exec --no-startup-id fcitx5 -d
+exec --no-startup-id sh -c 'setxkbmap -layout jp && exec --no-startup-id xmodmap "$HOME/.Xmodmap"'
+exec --no-startup-id xset r rate 250 30
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
