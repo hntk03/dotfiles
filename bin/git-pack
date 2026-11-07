@@ -1,0 +1,16 @@
+#!/bin/sh
+
+if [ "$#" -gt 1 ]; then
+  echo "Usage: git-pack [revision]" >&2
+  exit 2
+fi
+
+if ! repo_root=$(git rev-parse --show-toplevel 2>/dev/null); then
+  echo "git-pack: not inside a Git repository" >&2
+  exit 1
+fi
+
+revision=${1:-HEAD}
+repo_name=$(basename "$repo_root")
+
+git archive --format=zip --output="${repo_name}.zip" "$revision"
