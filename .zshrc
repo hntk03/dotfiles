@@ -19,8 +19,13 @@ zstyle ':vcs_info:git:*' formats '(%b)'
 # エイリアス
 alias gs='git status'
 alias gb='git branch'
-alias ls='ls -G'
 alias npm='echo use pnpm'
+if [[ "$OSTYPE" == linux* ]]; then
+  alias ls='ls --color=auto'
+  alias suspend='systemctl suspend'
+else
+  alias ls='ls -G'
+fi
 
 # mise
 eval "$(mise activate zsh)"
