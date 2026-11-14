@@ -1,8 +1,12 @@
 [core]
 	editor = nvim
+	quotepath = false
 
 [user]
   name = Ohno.T
   email = 46061787+hntk03@users.noreply.github.com
 [fetch]
 	prune = true
+
+[init]
+	defaultBranch = main
